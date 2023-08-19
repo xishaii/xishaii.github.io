@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>样式1</title>
+    <script src="jq.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            transition: all 0.3s;
+            /* display: flex; */
+        }
+        
+        .main {
+            width: 100%;
+            height: 100vh;
+            /* background-color: rgba(43, 0, 255, 0.345); */
+            overflow: hidden;
+        }
+        
+        .back {
+            width: 100%;
+            height: 100vh;
+            /* background-color: red; */
+            position: absolute;
+            top: 0;
+            z-index: -1;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            align-content: center;
+            overflow: hidden;
+            /* position: relative; */
+            /* opacity: 0.5; */
+        }
+        
+        .bacK {
+            height: 200%;
+            width: 10%;
+            /* border: 1px solid black; */
+            animation-name: anima;
+            animation-duration: 5s;
+            position: relative;
+            /* left: 50%; */
+            animation-fill-mode: backwards;
+            /* 不播动画时的样式 */
+            /* transform: rotate(45deg); */
+            animation-iteration-count: infinite;
+            /* 动画循环 */
+            /* animation-direction: alternate; */
+        }
+        
+        @keyframes anima {
+            0% {
+                right: 100%;
+            }
+            40% {
+                right: 0%;
+            }
+            60% {
+                right: 0%;
+            }
+            /* 90% {
+                right: -100%;
+            } */
+            100% {
+                right: -100%;
+            }
+        }
+        /* 背景END */
+        
+        .topbar {
+            width: 100%;
+            height: 70px;
+            display: flex;
+            position: absolute;
+            top: 0;
+            background-color: white;
+            box-shadow: #000000 0px 0px 30px;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            /* justify-content: space-around; */
+            align-items: center;
+            /* overflow: hidden; */
+        }
+        
+        .left {
+            width: 300px;
+            height: 30px;
+            font-size: 40px;
+            /* color: rgb(0, 0, 0, 0); */
+            -webkit-text-stroke: 1px #000000;
+            color: white;
+        }
+        
+        .right {
+            width: 300px;
+            height: 100%;
+            /* background-color: red; */
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+        .but {
+            width: 100px;
+            height: 50%;
+            background-color: azure;
+            outline: none;
+            border: solid 1px red;
+            font-size: 15px;
+            border-radius: 30px;
+            text-align: center;
+            overflow: hidden;
+            transition: all 0.5s;
+            left: 50%;
+        }
+        
+        .zi {
+            width: 100px;
+            height: 20px;
+            top: 25%;
+            position: relative;
+        }
+        
+        .zhengchang {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            position: absolute;
+            top: 0;
+            /* background-color: white; */
+            /* box-shadow: #000000 0px 0px 30px; */
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            /* align-items: center; */
+        }
+        
+        .yichang {
+            width: 80%;
+            height: 100%;
+            background-color: rgb(170, 235, 246);
+            position: relative;
+            left: 250px;
+            top: -25%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .yichang2 {
+            left: 0;
+            width: 100%;
+            /* top: -10%; */
+        }
+        
+        .but2 {
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            border-radius: 0;
+            overflow: hidden;
+            position: absolute;
+        }
+        
+        .ANuo {
+            width: 30%;
+            height: 100%;
+            display: flex;
+        }
+        
+        .xiaozi {
+            width: 100%;
+            font-size: 20px;
+        }
+        
+        .donghuazi {
+            width: 100%;
+            background-color: white;
+            border-radius: 30px;
+            font-size: 15px;
+            border: 1px solid black;
+            user-select: none;
+        }
+        
+        .kaiguanbeijing {
+            width: 100%;
+            background-color: white;
+            border-radius: 30px;
+            font-size: 15px;
+            border: 1px solid black;
+            user-select: none;
+        }
+        
+        .Aon {
+            color: #000000;
+        }
+        
+        .Aoff {
+            color: white;
+        }
+        
+        .ANyou {
+            width: 10%;
+            height: 50%;
+            /* background-color: red; */
+            border: 3px solid red;
+            /* align-items: center; */
+            user-select: none;
+            /* 用户不能选择内容 */
+        }
+        
+        .backW {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            z-index: -1;
+        }
+        
+        .danhua {
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            /* background: white; */
+            top: 0;
+            z-index: -1;
+            /* display: none; */
+            background-color: rgba(255, 255, 255, 0);
+        }
+        /* @keyframes meta */
+        
+        @media only screen and (max-width: 980px) {
+            .but2 {
+                height: 190%;
+            }
+        }
+        
+        .middle {
+            width: 100%;
+            height: 95%;
+            display: flex;
+            /* background-color: red; */
+        }
+        
+        .leftzuo {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .gaoshi {
+            width: 100%;
+            height: 40%;
+            background-color: red;
+            /* margin: auto auto; */
+            border: 5px solid black;
+            border-radius: 30px;
+            background-color: white;
+        }
+        
+        .daoyv {
+            width: 100%;
+            height: 30%;
+            font-size: 300%;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="topbar" id="topbar">
+            <div class="zhengchang">
+                <div class="left">Xshai的网站</div>
+                <div class="right">
+                    <button onclick="" class="but">首页</button>
+                    <div onclick="" class="but " id="but">
+                        <div class="zi">
+                            动画设置
+                        </div>
+                        <div class="yichang">
+                            <div class="ANzuo">
+                                <div class="xiaozi">移动动画开关</div>
+                                <!-- //小字体 -->
+                                <div class="donghuazi" unselectable="on" id="A1">
+                                    <span class="Aon" unselectable="on">
+                                        开
+                                    </span>
+                                    <!-- //开 -->
+                                    <span class="Aoff" unselectable="on">
+                                        关
+                                    </span>
+                                    <!-- 关 -->
+                                </div>
+                                <!-- //开关按钮 -->
+                            </div>
+                            <div class="ANzuo">
+                                <div class="xiaozi">淡化背景颜色</div>
+                                <!-- //小字体 -->
+                                <div class="danhuan kaiguanbeijing" unselectable="on" id="A2">
+                                    <span class="Aon" unselectable="on">
+                                        关
+                                    </span>
+                                    <!-- //开 -->
+                                    <span class="Aoff" unselectable="on">
+                                        开
+                                    </span>
+                                    <!-- 关 -->
+                                </div>
+                                <!-- //开关按钮 -->
+                            </div>
+
+
+                            <div class="ANzuo">
+                                <!-- 背景隐藏 -->
+                                <div class="xiaozi">隐藏背景颜色</div>
+                                <!-- //小字体 -->
+                                <div class="b_yinchang kaiguanbeijing" unselectable="on" id="A3">
+                                    <span class="Aon" unselectable="on">
+                                        关
+                                    </span>
+                                    <!-- //开 -->
+                                    <span class="Aoff" unselectable="on">
+                                        开
+                                    </span>
+                                    <!-- 关 -->
+                                </div>
+                                <!-- //开关按钮 -->
+                            </div>
+                            <div class="ANzhong">
+                                小提示：每次刷新都会改变背景颜色
+                            </div>
+                            <div class="ANyou">
+                                返回
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="middle">
+            <div class="leftzuo">
+                <div class="gaoshi">
+                    <div class="daoyv">导语</div>
+                    <div class="zhenzhengyv">
+                        这是我个人的网站。其实吧，我也不知道在导语里面写点什么。我也不知道该放点什么东西在我的网站上，一个域名花了我三十多块钱（哭），明年不想整网站了。这个网站可以干点什么事可以给我点建议。
+                    </div>
+                </div>
+            </div>
+
+            <div class="right"></div>
+        </div>
+        <div class="buton"></div>
+    </div>
+    <div class="backW">
+        <div class="back" id="back">
+            <div class="bacK"></div>
+            <div class="bacK"></div>
+            <div class="bacK"></div>
+            <div class="bacK"></div>
+            <div class="bacK"></div>
+            <div class="bacK"></div>
+            <div class="bacK"></div>
+            <div class="bacK"></div>
+            <div class="bacK"></div>
+            <div class="bacK"></div>
+        </div>
+
+    </div>
+    <div class="danhua"></div>
+
+    <script>
+        var shu = 0; //侦测动画用的变量
+        var shu1 = 0;
+        var shu2 = 0
+        $(function() {
+            for (var i = 0; i <= 10; i++) {
+                var SJ_color = '#' + parseInt(Math.random() * 0xFFFFFF).toString(16)
+                $(".bacK").eq(i).css({
+                    backgroundColor: SJ_color,
+                    animationDelay: i * 0.2 + 's',
+                });
+            }
+            // $('.bacK').css("background-color", '#' + parseInt(Math.random() * 0xFFFFFF).toString(16));
+            // $(".bacK").css("animationIterationCount", 0);
+
+            $('.zi').click(function() {
+                $('#but').toggleClass('but2');
+                $('.yichang').toggleClass('yichang2');
+            })
+
+            $('.donghuazi').click(function() { //判断是否启用动画
+
+                // var TheID = //判断ID
+                // console.log(idindex);
+                if (shu == 1) {
+                    shu = 0;
+                    $(this).css({
+                        background: '#ffffff'
+                    })
+                    $(".bacK").css("animationIterationCount", "infinite");
+                    setCookie(1, 0, 100000);
+                    // console.log('你*了给*，我写的这么好看的动画为啥要关掉');
+                } else {
+                    shu = 1
+                    $(this).css('background', '#000000')
+                    $(".bacK").css("animationIterationCount", 0);
+                    setCookie(1, 1, 100000); //要取消动画，在cookie里面设置DH并且值为1
+                    console.log('你*了个*，我写的这么好看的动画为啥要关掉');
+                }
+
+
+            })
+
+
+            $('.danhuan').click(function() { //判断是否启用动画
+
+                if (shu1 == 1) {
+                    shu1 = 0;
+                    $(this).css({
+                        background: '#ffffff'
+                    })
+                    $(".bacK").css("opacity", 1);
+                    setCookie(2, 0, 100000);
+                } else {
+                    shu1 = 1
+                    $(this).css('background', '#000000')
+                    $(".bacK").css("opacity", 0.5);
+                    setCookie(2, 1, 100000); //要取消动画，在cookie里面设置DH并且值为1
+                    // console.log('你*了个*，我写的这么好看的动画为啥要关掉');
+                }
+
+
+            })
+
+            $('.b_yinchang').click(function() { //判断是否启用动画
+
+                if (shu2 == 1) {
+                    shu2 = 0;
+                    $(this).css({
+                        background: '#ffffff'
+                    })
+                    $(".danhua").css("background", 'rgba(255, 255, 255, 0)');
+                    setCookie(3, 0, 100000);
+                } else {
+                    shu2 = 1
+                    $(this).css('background', '#000000')
+                    $(".danhua").css("background", 'rgba(255, 255, 255)');
+                    setCookie(3, 1, 100000); //要取消动画，在cookie里面设置DH并且值为1
+                    console.log('你*了个*，我写的这么好看的动画为啥要关掉');
+                }
+
+
+            })
+
+            $('.ANyou').click(function() { //最右侧的返回框框
+                $('#but').toggleClass('but2');
+                $('.yichang').toggleClass('yichang2');
+            })
+
+
+
+            for (var ii = 0; ii <= 3; ii++) {
+                if (getCookie('' + ii) == 1) {
+                    document.getElementById('A' + ii).click();
+                }
+            }
+        })
+
+
+
+
+
+
+
+        function IsPhone() {
+            //获取浏览器navigator对象的userAgent属性（浏览器用于HTTP请求的用户代理头的值）
+            var info = navigator.userAgent;
+            //通过正则表达式的test方法判断是否包含“Mobile”字符串
+            var isPhone = /mobile/i.test(info);
+            //如果包含“Mobile”（是手机设备）则返回true
+            return isPhone;
+        }
+        // TODO: 手机端视图
+        if (IsPhone() == 1) {
+            $(".bacK").css({
+                transform: "rotate(45deg)"
+            });
+            $('.back').css({
+                width: '300%',
+                left: '-100%'
+            });
+            $('.backW').css({
+                position: 'absolute',
+                top: 0,
+                zIndex: -1
+            });
+            $('.topbar').css('height', '80px');
+            $('.zhengchang').css({
+                flexDirection: "column",
+                flexWrap: "nowrap",
+                alignItems: "center",
+            });
+            $('.right').css({
+                height: '80%'
+            })
+            $('but2').css('height', '200%');
+        }
+
+
+        //设置cookie
+        function setCookie(name, value, expires) {
+            const date = new Date();
+            date.setTime(date.getTime() + expires * 24 * 60 * 60 * 1000);
+            const expiresValue = "expires=" + date.toUTCString();
+            document.cookie = name + "=" + value + ";" + expiresValue + ";path=/";
+        }
+
+        // var caa = getCookie('aa');
+
+        // const name = getCookie('name');
+        //读取cookie
+        function getCookie(name) {
+            // 将 cookie 字符串分割为各个 cookie
+            const cookies = document.cookie.split(';');
+            // 遍历所有 cookie
+            for (const cookie of cookies) {
+                // 将 cookie 名和值分开
+                const [cookieName, cookieValue] = cookie.split('=');
+                // 如果找到了名称匹配的 cookie，则返回值
+                if (cookieName.trim() === name) {
+                    return cookieValue;
+                }
+            }
+            // 如果找不到匹配的 cookie，则返回 null
+            return 'null';
+        }
+        //删除cookie
+        function delcookie(name) {
+            setCookie(name.toString(10), null, -10);
+            setCookie((name + 100).toString(10), null, -10);
+            // // name + 100;
+        }
+
+        // $(".bacK").css("animationIterationCount", "infinite");
+        // $(".bacK").css("animationIterationCount", 0);
+        // 动画开关
+    </script>
+</body>
+
+</html>
